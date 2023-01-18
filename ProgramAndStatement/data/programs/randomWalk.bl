@@ -1,0 +1,24 @@
+PROGRAM randomWalk IS
+    BEGIN
+    WHILE true DO
+        IF next-is-enemy THEN
+            infect  
+        ELSE
+            IF random THEN
+                IF random THEN
+                    turnleft
+                ELSE
+                    turnright
+                END IF
+            END IF
+            
+            move
+        END IF
+        IF next-is-wall THEN
+            turnleft
+            IF next-is-wall THEN
+                turnleft
+            END IF
+        END IF
+    END WHILE
+END randomWalk
