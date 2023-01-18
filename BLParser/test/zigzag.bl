@@ -1,0 +1,25 @@
+PROGRAM zigzag IS
+    INSTRUCTION go IS
+        IF next-is-enemy THEN
+            infect
+        ELSE
+            IF next-is-wall THEN
+                turnleft
+                turnleft
+            END IF
+            move
+        END IF
+    END go
+        
+    BEGIN
+    WHILE true DO
+        go
+        turnright
+        go
+        turnleft
+        go
+        turnleft
+        go
+        turnright
+    END WHILE
+END zigzag
